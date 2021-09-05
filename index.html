@@ -1,18 +1,285 @@
 <!DOCTYPE html>
 <html>
     <head>
-        You've landed in Sangeetha's webpage :)
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/tab-style.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="js/tab-script.js"></script>
+        
     </head>
-    <body>
-        <nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-        </nav>
-        Hi, I am Sangeetha. 
+    <body onload="document.getElementById('defaultOpen').click();">
+        <!-- About me section -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="img-responsive" src="images/profile_image.jpeg" alt="Landing Image">
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-center">
+                        Welcome to Sangeetha's webpage :) 
+                    </h3>
+                    <p class="text-justify"> 
+                        I am a third-year graduate student at Univeristy of Wisconsin-Madison. My interests lie in the intersection of Physics-based simulation and High-performance computing. I am particularly interested in designing high-scale physics-simulations. I also find it cool to augment physics with some deep learning techniques to teach computers physics! 
+                        I am fortunate to work with my advisor, <a href="http://pages.cs.wisc.edu/~sifakis/">Prof. Eftychios Sifakis</a>. I also graduated with a B.Tech in Computer Science from National Institute of Technology Karnataka (NITK), India. Before coming to the US, I also worked for a year at Adobe, India (where my admiration for C++ began).
+                    </p>
+                    
+                    <p>
+                        I love biking in and around Madison. I have a great mountain bike but I want to start road biking! I also like baking and cooking. I make it a point to try out a new recipe whenever I find time.
+                    </p>
+
+                    <p class="text-center"> 
+                        CV available on request. 
+                    </p>
+
+                    <br>
+                    <div class="row" style="text-align: center">
+                        <a href = "mailto:sgsrinivasa2@cs.wisc.edu" class="btn btn-primary"> Email </a>
+                        <a href="https://www.linkedin.com/in/sangeetha-g-s" class="btn btn-primary">LinkedIn</a>
+                        <a href="https://github.com/sanggs" class="btn btn-primary">Github</a>
+                        <a href="https://scholar.google.com/citations?user=FeTW3ZgAAAAJ&hl=en" class="btn btn-primary">Google Scholar</a>
+                    </div>
+                    <br>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab section -->
+        
+        <div class="container-fluid">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'CareerUpdates')" id="defaultOpen">
+                    News
+                </button>
+                <button class="tablinks" onclick="openTab(event, 'WorkExp')">
+                    Work Experience
+                </button>
+                <button class="tablinks" onclick="openTab(event, 'Publications')">
+                    Publications
+                </button>
+                <button class="tablinks" onclick="openTab(event, 'ExtraCur')">
+                    Miscellaneous
+                </button>
+            </div>
+
+            <!-- Tab content -->
+            <div id="CareerUpdates" class="tabcontent">
+                <span onclick="closeTab(event, 'CareerUpdates')" style="float: right;">
+                    <a class="btn btn-default" role="button"> Close this tab </a>
+                </span>
+                <h3 class="text-center"> 
+                    News
+                </h3>
+
+                <table class="table table-striped">
+
+                    <tr>
+                        <td>
+                            Aug 2021
+                        </td>
+                        <td>
+                            Completed a summer internship in the Physics Research Team at Nvidia.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Feb 2021
+                        </td>
+                        <td>
+                            Our paper on 'Learning Active Physics-based models from data' got accepted into SIGGRAPH 2021 (my first paper at SIGGRAPH! yay!)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            May 2020
+                        </td>
+                        <td>
+                            Awarded UW CS Summer RAship 2020 - to pursue research during the summer [Jun to Aug 2020].
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            September 2019
+                        </td>
+                        <td>
+                            Joined the Computer Sciences department at University of Wisconsin-Madison.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            June 2018 
+                        </td>
+                        <td>
+                            Started as a Software Development Engineer in the Cloud Technology Team at Adobe, India.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            May 2018 
+                        </td>
+                        <td>
+                            Graduated from NITK, India with a B.Tech in Computer Science.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div id="WorkExp" class="tabcontent">
+                <span onclick="closeTab(event, 'WorkExp')" style="float: right;">
+                    <a class="btn btn-default" role="button"> Close this tab </a>
+                </span>
+                <h3 class="text-center"> 
+                    Work Experience 
+                </h3>
+                <table class="table table-striped">
+
+                    <tr>
+                        <td>
+                            Jun 2020 - Present
+                            <br>
+                            UW Madison
+                        </td>
+                        <td>
+                            Graduate Research Assistant
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Jun 2021 - Aug 2021
+                            <br>
+                            NVIDIA, USA
+                        </td>
+                        <td>
+                            Implemented and evaluated different methods to design an efficient FEM solver on the Nvidia GPU to simulate soft-body physics.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            September 2019 - May 2020 
+                            <br>
+                            UW Madison
+                        </td>
+                        <td>
+                            Graduated Teaching Assistant for the Programming III course (CS400) - taught by Prof. Debra Deppeler.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            June 2018 - August 2019
+                            <br>
+                            Adobe, India
+                        </td>
+                        <td>
+                            Worked as a Software Development Engineer on the ACPLocal (Adobe Content Platform) to sync files across devices (desktop and mobile) in the Cloud Technology team at Adobe, India.  Developed a platform agnostic asset upload-download C++ library that can be used by all Adobe products for syncing files on cloud.
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div id="Publications" class="tabcontent">
+                <span onclick="closeTab(event, 'Publications')" style="float: right;">
+                    <a class="btn btn-default" role="button"> Close this tab </a>
+                </span>
+                <div>
+                    <p class="text-justify"> 
+                        For a list of my publications, please visit my 
+                        <a href="https://scholar.google.com/citations?user=FeTW3ZgAAAAJ&hl=en">
+                            Google Scholar profile
+                        </a> 
+                    </p>
+                </div>
+            </div>
+
+            <div id="ExtraCur" class="tabcontent">
+                <span onclick="closeTab(event, 'ExtraCur')" style="float: right;">
+                    <a class="btn btn-default" role="button"> Close this tab </a>
+                </span>
+                <h3 class="text-center"> 
+                    Miscellaneous
+                </h3>
+
+                <h4 class="text-justify"> 
+                    1. Biking Trails
+                </h4>
+
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <p class="text-center"> Monona Loop, Madison WI </p>
+                        <img class="img-responsive" src="images/bike_rides/Monona_loop.jpeg" alt="Monona Loop">
+                    </div>
+
+                    <div class="col-md-3">
+                        <p class="text-center"> Upper River Yahara Trail, WI </p>
+                        <img class="img-responsive" src="images/bike_rides/Upper_River_Yahara.jpeg" alt="Yahara Trail">
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <p class="text-center"> UW Arboretum, Madison WI </p>
+                        <img class="img-responsive" src="images/bike_rides/UW_Arboretum.jpeg" alt="UW_Arboretum">
+                    </div>
+
+                    <div class="col-md-3">
+                        <p class="text-center"> Douglas Trail, Rochester MN </p>
+                        <img class="img-responsive" src="images/bike_rides/Douglas_Trail.jpeg" alt="Douglas Trail">
+                    </div>
+                </div>
+
+                <h4 class="text-justify"> 
+                    2. Indian Cooking
+                </h4>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <p class="text-center"> Steamed Idli (pronounce ed-lee) with Sambar</p>
+                        <img class="img-responsive" src="images/recipes/idli.jpeg" alt="idli">
+                    </div>
+
+                    <div class="col-md-2">
+                        <p class="text-center"> Dosa with Onion-Potato Curry and Coconut Chutney </p>
+                        <img class="img-responsive" src="images/recipes/dosa.jpeg" alt="dosa">
+                    </div>
+                    
+                    <div class="col-md-2">
+                        <p class="text-center"> Baingan Bharta </p>
+                        <img class="img-responsive" src="images/recipes/eggplant.jpeg" alt="eggplant">
+                    </div>
+
+                    <div class="col-md-2">
+                        <p class="text-center"> Aloo (Potato) Paratha </p>
+                        <img class="img-responsive" src="images/recipes/paratha.jpeg" alt="paratha">
+                    </div>
+
+                    <div class="col-md-2">
+                        <p class="text-center"> Bisibelebath (veggie lentil dish) </p>
+                        <img class="img-responsive" src="images/recipes/bisibelebath.jpeg" alt="bisibelebath">
+                    </div>                    
+
+                </div>
+            </div>            
+
+        </div>
+
+
+        <!-- Footer note-->
+        <div class="container-fluid">
+            <footer class="footer">
+                <p>
+                    This webpage uses <a href="https://getbootstrap.com/docs/3.4/css/">bootstrap</a>. Please click <a href="">here</a> for the template. © Sangeetha Grama Srinivasan
+                </p>
+            </footer>
+        </div>
     </body>
 
 </html>
